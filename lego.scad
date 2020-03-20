@@ -17,6 +17,15 @@ module pieza_mecano(drill=3,dist_taladro=10,nun_taladros=5,anchura=10,grosor=3){
 }
 
 //ejemplos
-pieza_mecano();
-translate([0,30,0])
-    pieza_mecano(nun_taladros=2);
+//pieza_mecano();
+
+for(i = [1:9])
+    if(i%2==0){
+        color("white")
+        translate([0,i*20,0])
+            pieza_mecano(nun_taladros=10);
+    }else{
+        color("green")
+        translate([0,i*20,0])
+            pieza_mecano(nun_taladros=10);
+        }
