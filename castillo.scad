@@ -13,11 +13,16 @@ centro_altura_castillo=100;
 centro_radio_cono_torre=40;
 centro_altura_cono_torre=80;
 
-grosor_puerta=10;
-alto_puerta=100;
+grosor_puerta=8;
+alto_puerta=80;
 
+//terreno
+color("green")
+translate([0,0,-alto_pared/2])
+cube([500,500,1],center=true);
 
 //pared del castillo
+color("grey")
 difference(){
 cube([ancho_pared,ancho_pared,alto_pared],center=true);
     translate([0,0,1])
