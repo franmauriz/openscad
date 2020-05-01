@@ -32,8 +32,14 @@ cube([ancho_pared,ancho_pared,alto_pared],center=true);
 rotate([90,0,0])
     translate([0,-(alto_pared/2),(ancho_pared/2)-grosor_puerta])
 color("green")
-    cylinder(d=alto_puerta,h=20);
+    cylinder(d=alto_puerta,h=20,$fn=100);
+    
+
 }
+
+translate([0,-(ancho_pared/2),-(alto_pared/2)])
+color("brown")
+   cube([alto_puerta,ancho_pared+radio_cono_torre,4],center=true);
 
 //torres
 translate([ancho_pared/2,ancho_pared/2,-alto_pared/2])
